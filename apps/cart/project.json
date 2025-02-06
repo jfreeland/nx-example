@@ -123,9 +123,9 @@
       "options": {
         "commands": [
           "git checkout main",
+          "git pull --rebase",
           "sed -i -E 's/(s+image: some.docker.io/cart):?S*/\\1:cart-{args.tag}/g' deploy/*/*.yaml",
           "git add -A",
-          "git pull",
           "git commit -m \"ci: update cart deployment manifests\"",
           "git push"
         ]
