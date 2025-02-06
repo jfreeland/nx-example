@@ -1,0 +1,60 @@
+name: Publish Release
+
+on:
+  pull_request:
+    types:
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+  packages: write
+
+jobs:
+  publish-release:
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    #env:
+    #  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          npm update -g npm
+          npm ci --force
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "testing"
+          git config --global user.email "testing@free.land"
+
+      #- name: Share env vars in .env file
+      #  run: |
+      #    touch .env
+      #    echo GITHUB_TOKEN=$GITHUB_TOKEN >> .env
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v4
+
+      - run: |
+          echo "BASE: ${{ env.NX_BASE }}"
+          echo "HEAD: ${{ env.NX_HEAD }}"
+
+      - name: Version, tag, and publish release for affected projects
+        run: |
+          INPUT_GITHUB_TOKEN=${{ secrets.TOKEN }} npx nx affected \
+            --target=version \
+            --base=$(git describe --tags --abbrev=0) \
+            --head=main \
+            --exclude=*-e2e \
+            --parallel=1
