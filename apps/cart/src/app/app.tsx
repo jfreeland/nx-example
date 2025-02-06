@@ -4,7 +4,7 @@ import '@nx-example/shared/header';
 
 import { CartCartPage } from '@nx-example/cart/cart-page';
 
-// oops ok
+// ok closer
 
 export const App = () => {
   return (
