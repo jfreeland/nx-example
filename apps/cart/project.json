@@ -122,6 +122,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
+          "echo $NX_PROJECT_NAME",
           "git checkout main",
           "git pull --rebase",
           "sed -i -E \"s/([[:space:]]+image: some.docker.io/cart):.*/\\1:cart-{args.tag}/g\" deploy/*/*.yaml",
