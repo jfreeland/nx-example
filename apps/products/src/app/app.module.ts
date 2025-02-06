@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 
-// come play with my pipeline
+// err no
 
 @NgModule({
   declarations: [AppComponent],
