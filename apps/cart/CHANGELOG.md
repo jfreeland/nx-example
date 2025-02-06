@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.2](https://github.com/jfreeland/nx-example/compare/cart-0.3.1...cart-0.3.2) (2025-02-06)
+
+
+### Bug Fixes
+
+* nope ([4d56f64](https://github.com/jfreeland/nx-example/commit/4d56f6452a841940e436c4c9d6419c0c2a480ad3))
+
+
+
 ## [0.3.1](https://github.com/jfreeland/nx-example/compare/cart-0.3.0...cart-0.3.1) (2025-02-06)
 
 
