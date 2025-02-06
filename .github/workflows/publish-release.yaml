@@ -57,4 +57,5 @@ jobs:
             --base=$(git describe --tags --abbrev=0) \
             --head=main \
             --exclude=*-e2e \
-            --parallel=1
+            --parallel=1 \
+            --skip-nx-cache
