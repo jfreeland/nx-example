@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 
-// err close
+// set x
 
 @NgModule({
   declarations: [AppComponent],
