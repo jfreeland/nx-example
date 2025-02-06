@@ -1,0 +1,4 @@
+cart:
+  image: some.docker.io/cart:cart-0.1.0
+products:
+  image: some.docker.io/products:products-0.1.0

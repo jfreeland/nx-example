@@ -102,7 +102,9 @@
       "options": {
         "push": true,
         "postTargets": [
-          "github"
+          "github",
+          "build",
+          "updateDeploy"
         ]
       }
     },
@@ -111,6 +113,22 @@
       "options": {
         "tag": "{tag}",
         "notesFile": "./CHANGELOG.md"
+      }
+    },
+    "updateDeploy": {
+      "dependsOn": [
+        "build"
+      ],
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "git checkout main",
+          "sed -i -E 's/(s+image: some.docker.io/cart):?S*/\\1:cart-{args.tag}/g' deploy/*/*.yaml",
+          "git add -A",
+          "git pull",
+          "git commit -m \"ci: update cart deployment manifests\"",
+          "git push"
+        ]
       }
     }
   },
