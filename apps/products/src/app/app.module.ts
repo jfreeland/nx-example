@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 
-// test another thing
+// and another one
 
 @NgModule({
   declarations: [AppComponent],
