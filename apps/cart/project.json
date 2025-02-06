@@ -128,9 +128,9 @@
           "set -x; git stash",
           "set -x; git checkout main",
           "set -x; git pull --rebase",
-          "set -x; sed -i -E \"s/([[:space:]]+image: some.docker.io\\/{projectName}):.*/\\1:{projectName}-{args.tag}/g\" deploy/*/*.yaml",
+          "set -x; sed -i -E \"s/([[:space:]]+image: some.docker.io\\/{projectName}):.*/\\1:{projectName}-{tag}/g\" deploy/*/*.yaml",
           "set -x; git add -A",
-          "set -x; git commit -m \"ci: update cart deployment manifests\"",
+          "set -x; git commit -m \"ci({projectName}): deploy {tag}\"",
           "set -x; git push"
         ]
       }
