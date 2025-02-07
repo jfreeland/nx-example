@@ -123,12 +123,12 @@
       "options": {
         "commands": [
           "echo project={projectName}",
-          "echo \"Sometimes our yarn.lock has been modified and we don't care.\"",
+          "echo \"Sometimes our yarn.lock has been modified and we don't care so we stash changes before continuing.\"",
           "set -x; git add .",
           "set -x; git stash",
           "set -x; git checkout main",
           "set -x; git pull --rebase",
-          "set -x; sed -i -E \"s/([[:space:]]+image: some.docker.io\\/{projectName}):.*/\\1:{projectName}-{tag}/g\" deploy/*/*.yaml",
+          "set -x; sed -i -E \"s/([[:space:]]+image: some.docker.io\\/{projectName}):.*/\\1:{tag}/g\" deploy/*/*.yaml",
           "set -x; git add -A",
           "set -x; git commit -m \"ci({projectName}): deploy {tag}\"",
           "set -x; git push"
