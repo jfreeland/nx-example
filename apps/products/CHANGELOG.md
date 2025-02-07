@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.1](https://github.com/jfreeland/nx-example/compare/products-0.3.0...products-0.3.1) (2025-02-07)
+
+
+### Bug Fixes
+
+* goof ([62e2c7b](https://github.com/jfreeland/nx-example/commit/62e2c7bafc39698c78475d430d3059f6b3d6b7fb))
+
+
+
 # [0.3.0](https://github.com/jfreeland/nx-example/compare/products-0.2.6...products-0.3.0) (2025-02-07)
 
 
