@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/jfreeland/nx-example/compare/beta-v2.0.0...beta-v2.1.0) (2025-02-21)
+
+
+### Features
+
+* wth ([#19](https://github.com/jfreeland/nx-example/issues/19)) ([a36d026](https://github.com/jfreeland/nx-example/commit/a36d0261a5bce1b3e121f52c310a5e34d378c7f6))
+
+
+### Bug Fixes
+
+* remove not ([#16](https://github.com/jfreeland/nx-example/issues/16)) ([c8310ee](https://github.com/jfreeland/nx-example/commit/c8310ee714e903a524fe6f973032dd35d14e73d3))
+
 ## [2.0.0](https://github.com/jfreeland/nx-example/compare/beta-v1.1.0...beta-v2.0.0) (2025-02-21)
 
 
