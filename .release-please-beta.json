@@ -6,7 +6,6 @@
   "packages": {
     ".": {
       "component": "beta",
-      "release-as": "beta",
       "release-type": "simple",
       "changelog-path": "deploy/versions/CHANGELOG-beta.md",
       "version-file": "deploy/versions/version-beta.txt",
