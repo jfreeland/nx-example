@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: Release Manifests
+
+jobs:
+  release-please:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        environment: [beta, prod]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release, Please
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.TOKEN }}
+          config-file: .release-please-${{ matrix.environment }}.json
+          default-branch: main
