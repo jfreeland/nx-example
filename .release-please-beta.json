@@ -9,7 +9,7 @@
       "release-type": "simple",
       "changelog-path": "deploy/versions/CHANGELOG-beta.md",
       "version-file": "deploy/versions/version-beta.txt",
-      "pull-request-title-pattern": "chore(beta): release ${version} to beta"
+      "pull-request-title-pattern": "chore(manifests): release ${version} to beta"
     }
   }
 }

@@ -10,7 +10,7 @@
       "release-type": "simple",
       "changelog-path": "deploy/versions/CHANGELOG-prod.md",
       "version-file": "deploy/versions/version-prod.txt",
-      "pull-request-title-pattern": "chore(prod): release ${version} to **production**"
+      "pull-request-title-pattern": "chore(manifests): release ${version} to PROD"
     }
   }
 }
