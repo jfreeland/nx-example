@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.4.0](https://github.com/jfreeland/nx-example/compare/products-0.3.1...products-0.4.0) (2025-02-21)
+
+
+### Bug Fixes
+
+* remove not ([#16](https://github.com/jfreeland/nx-example/issues/16)) ([c8310ee](https://github.com/jfreeland/nx-example/commit/c8310ee714e903a524fe6f973032dd35d14e73d3))
+
+
+### Features
+
+* this is an insanely long and silly commit message ([2e82d4c](https://github.com/jfreeland/nx-example/commit/2e82d4cfb3f016050fa0e2f7a7cd45fac8a251b8))
+* wth ([#19](https://github.com/jfreeland/nx-example/issues/19)) ([a36d026](https://github.com/jfreeland/nx-example/commit/a36d0261a5bce1b3e121f52c310a5e34d378c7f6))
+
+
+
 ## [0.3.1](https://github.com/jfreeland/nx-example/compare/products-0.3.0...products-0.3.1) (2025-02-07)
 
 
