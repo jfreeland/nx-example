@@ -23,5 +23,5 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           config-file: .release-please-${{ matrix.environment }}.json
-          manifest-file: .release-please-${{ matrix.environment }}.json
+          manifest-file: .release-please-manifest-${{ matrix.environment }}.json
           default-branch: main
