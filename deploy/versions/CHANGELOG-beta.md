@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.0.0](https://github.com/jfreeland/nx-example/compare/beta-v1.1.0...beta-v2.0.0) (2025-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* what's this going to do
+
+### fix\
+
+* what's this going to do ([60012e7](https://github.com/jfreeland/nx-example/commit/60012e7d015daffc2a860330747ca774ae5972bc))
+
+
+### Features
+
+* this is an insanely long and silly commit message ([2e82d4c](https://github.com/jfreeland/nx-example/commit/2e82d4cfb3f016050fa0e2f7a7cd45fac8a251b8))
+
+
+### Bug Fixes
+
+* a thing ([4884359](https://github.com/jfreeland/nx-example/commit/48843590bf475a85963a679a28a90b18deaa1b10))
+
 ## [1.1.0](https://github.com/jfreeland/nx-example/compare/beta-v1.0.0...beta-v1.1.0) (2025-02-21)
 
 
