@@ -14,11 +14,11 @@ jobs:
           fetch-depth: 0
 
       - name: Push main to prod branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           git config --global user.name "testing"
           git config --global user.email "testing@free.land"
           git checkout prod
           git pull origin main --ff-only
           git push origin prod
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
