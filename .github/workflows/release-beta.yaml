@@ -22,7 +22,7 @@ jobs:
 
       - name: Push main to beta branch
         env:
-          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.BETA_TOKEN }}
         run: |
           git config --global user.name "testing"
           git config --global user.email "testing@free.land"
