@@ -1,0 +1,31 @@
+name: Release Beta
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: web-release-beta
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment: beta
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push main to beta branch
+        run: |
+          git config --global user.name "testing"
+          git config --global user.email "testing@free.land"
+          git checkout beta
+          git pull origin main --ff-only
+          git push origin beta
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}

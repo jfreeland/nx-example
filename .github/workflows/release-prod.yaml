@@ -1,0 +1,24 @@
+name: Release Prod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push main to prod branch
+        run: |
+          git config --global user.name "testing"
+          git config --global user.email "testing@free.land"
+          git checkout prod
+          git pull origin main --ff-only
+          git push origin prod
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}

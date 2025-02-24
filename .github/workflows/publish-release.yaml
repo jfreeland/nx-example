@@ -38,11 +38,6 @@ jobs:
           git config --global user.name "testing"
           git config --global user.email "testing@free.land"
 
-      #- name: Share env vars in .env file
-      #  run: |
-      #    touch .env
-      #    echo GITHUB_TOKEN=$GITHUB_TOKEN >> .env
-
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v4
 
