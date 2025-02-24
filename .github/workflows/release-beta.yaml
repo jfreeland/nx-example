@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.BETA_TOKEN }}
 
       - name: Push main to beta branch
         env:
@@ -28,4 +29,5 @@ jobs:
           git config --global user.email "testing@free.land"
           git checkout beta
           git pull origin main --ff-only
-          git push --quiet "https://${TOKEN}@github.com/${{ github.repository }}.git" beta
+          #git push --quiet "https://${TOKEN}@github.com/${{ github.repository }}.git" beta
+          git push origin beta
