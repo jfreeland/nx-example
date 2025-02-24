@@ -29,5 +29,4 @@ jobs:
           git config --global user.email "testing@free.land"
           git checkout beta
           git pull origin main --ff-only
-          #git push --quiet "https://${TOKEN}@github.com/${{ github.repository }}.git" beta
           git push origin beta

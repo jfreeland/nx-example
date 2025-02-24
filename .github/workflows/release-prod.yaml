@@ -12,10 +12,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.BETA_TOKEN }}
 
       - name: Push main to prod branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        #env:
+        #  GITHUB_TOKEN: ${{ secrets.BETA_TOKEN }}
         run: |
           git config --global user.name "testing"
           git config --global user.email "testing@free.land"
