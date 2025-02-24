@@ -28,4 +28,4 @@ jobs:
           git pull origin main --ff-only
           git push origin beta
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BETA_TOKEN }}
