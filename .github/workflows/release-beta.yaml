@@ -22,10 +22,10 @@ jobs:
 
       - name: Push main to beta branch
         env:
-          GITHUB_TOKEN: ${{ secrets.BETA_TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
         run: |
           git config --global user.name "testing"
           git config --global user.email "testing@free.land"
           git checkout beta
           git pull origin main --ff-only
-          git push --quiet "https://x-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}" beta
+          git push --quiet "https://x-token:${TOKEN}@github.com/${{ github.repository }}" beta
